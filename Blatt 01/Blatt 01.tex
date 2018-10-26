@@ -1,0 +1,129 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ngerman}
+\usepackage{graphicx}
+
+\setcounter{secnumdepth}{0}
+\title{Übungsblatt 01}
+\author{Lennard Behrens, Tizian Roth}
+
+\begin{document}
+
+\maketitle
+
+\section{Aufgabe 1}
+
+Da aus den Messungen nicht hervorgeht, welches Photon des Laserpulses vom Detektor gemessen wird, folgt die Messungenauigkeit aus der Sensorauflösung. 
+Für die absolute Messungenauigkeit gilt dann folglich \\
+\begin{center}
+  $\Delta s = T \cdot c = 1,50 \cdot 10^{-10} \mbox s \cdot 3,0 \cdot 10^{8} \mbox{m/s} = 4,5 \mbox{cm}$ .
+\end{center}
+Wobei $T$ der zeitliche Abstand zwischen den Messungen und $c$ die Lichtgeschwindigkeit ist. \par
+Für die relative Messungenauigkeit gilt dann
+\begin{center}
+  $\frac{\Delta s}{s} = 1,7 \cdot 10^{-10} $ .
+\end{center}
+
+
+\section{Aufgabe 2}
+
+Aus dem vorgegebenen Faktor folgt für die relative Zeitabweichung
+\begin{center}
+  $\frac{\Delta t}{t} = 1 - \sqrt{1 - \frac{v^2}{c^2}}$ .
+\end{center}
+Aus Erfahrung weiß man, dass eine Fahrt von Marburg nach Gießen und zurück etwa $30$ Minuten dauert. 
+Für die Geschwindigkeit des Zuges gilt die grobe Näherung
+\begin{center}
+  $v = \frac 1 3 \cdot 10^2 \mbox{m/s}$ .
+\end{center}
+Daraus ergibt sich dann die relative Zeitabweichung von
+\begin{center}
+  $\frac{\Delta t}{t} = 6,2 \cdot 10^{-15} $
+\end{center}
+und eine absolute Zeitabweichung von
+\begin{center}
+  $\Delta t = 1800 \mbox{s} \cdot 6,2 \cdot 10^{-15} = 11 \mbox{ps}$ .  
+\end{center}
+
+
+\section{Aufgabe 3}
+
+\subsection{Aufgabe 3a}
+Für die Zeit, die das Licht von Beteigeuze zur Erde braucht, gilt 
+\begin{center}
+  $\Delta t = \frac{d}{c} = \frac{6,0 \cdot 10^{18}\mbox{m}}{3,0 \cdot 10^8 \mbox{m/s}} = 634\mbox{a}$ .
+\end{center}
+
+\subsection{Aufgabe 3b}
+Für die Entfernung in Abhängigkeit zu $\delta$ gilt
+\begin{center}
+  $
+    \sin \delta = \frac{r}{d} \Leftrightarrow 
+    \delta     = \arcsin\frac{r}{d} = 2,5 \cdot 10^{-8}
+  $
+\end{center}
+Wobei $r$ der Abstand zwischen Erde und Sonne ist.
+
+\subsection{Aufgabe 3c}
+Für die Entfernung zum Stern gilt der Zusammenhang
+\begin{center}
+  $d = \frac{r}{\sin \delta}$
+\end{center}
+Nun weicht die Messung der Sternparallaxe um $\pm\Delta\delta$ von der tatsächlichen Entfernung ab. Wodurch sich eine absolute Messungenauigkeit $\pm\Delta d$ ergibt. Da sich bei so kleinen Winkeln der $\sin \delta$ annähernd linear verhält, gilt für die absolute Messungenauigkeit
+\begin{center}
+  $
+    \Delta d = \frac{r}{2} \left|  \frac{1}{\sin(\delta + \Delta\delta)} - \frac{1}{\sin(\delta - \Delta\delta)} \right|
+    = 1,2 \cdot 10^{18} \mbox{m} = 127,9 \mbox{Lj}
+  $ .
+\end{center}
+Für die relative Messungenauigkeit gilt dann
+\begin{center}
+  $
+    \frac{\Delta d}{d} = 0,2 = 20 \mbox{\%}
+  $ .
+\end{center}
+
+\subsection{Aufgabe 3d}
+Für die Bearbeitung der Aufgabe wird angenommen, dass die Raumsonde Gaia genausoweit von der Sonne entfernt ist wie die Erde. 
+Daraus folgt der Zusammenhang für die Entfernung
+\begin{center}
+  $d = \frac{1}{\sin \delta}$ .
+\end{center}
+Für die absolute Messungenauigkeit $\Delta d$ gilt dann, wie in der obigen Aufgabe
+\begin{center}
+  $
+    \Delta d = \frac{r}{2} \left|  \frac{1}{\sin(\delta + \Delta\delta)} - \frac{1}{\sin(\delta - \Delta\delta)} \right|
+  $ .
+\end{center}
+Die Messung scheitert dann, wenn
+\begin{center}
+  $ \sin(\delta - \Delta\delta) = 0$ .
+\end{center}
+Daraus folgt, dass im Grenzfall (wenn die Entfernung nicht mehr gemessen werden kann) folgendes gilt
+\begin{center}
+  $\delta = \Delta\delta$ .
+\end{center}
+Daraus folgt für die maximal zu messende Distanz 
+\begin{center}
+  $
+    d_{\mbox{max}} < \frac{r}{\sin \Delta\delta} = \frac{150 \cdot 10^9 \mbox{m}}{\sin 25 \cdot \frac{\pi}{648000} \cdot 10^{-6}}
+    = 7,09 \cdot 10^{22} \mbox{m} = 7,5 \cdot 10^{6} \mbox{Lj}
+  $ .
+\end{center}
+\section{Aufgabe 4}
+
+  \includegraphics{./aufgabe_4.pdf}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
