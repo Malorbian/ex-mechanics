@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{ngerman}
+\usepackage{amsmath}
 \usepackage{graphicx}
 
 \setcounter{secnumdepth}{0}
@@ -15,15 +16,15 @@
 
 \section{Aufgabe 1}
 
-Da aus den Messungen nicht hervorgeht, welches Photon des Laserpulses vom Detektor gemessen wird, folgt die Messungenauigkeit aus der Sensorauflösung. 
+Da aus den Messungen nicht hervorgeht, welches Photon des Laserpulses vom Detektor gemessen wird, folgt die Messungenauigkeit aus der Sensorauflösung. Zudem muss beachtet werden, dass gilt $2\Delta s$, da der Laserimpuls zum Mond hin und wieder zurück läuft.
 Für die absolute Messungenauigkeit gilt dann folglich \\
 \begin{center}
-  $\Delta s = T \cdot c = 1,50 \cdot 10^{-10} \mbox s \cdot 3,0 \cdot 10^{8} \mbox{m/s} = 4,5 \mbox{cm}$ .
+  $\Delta s = \frac{1}{2} T \cdot c = \frac{1}{2} 1,50 \cdot 10^{-10} \mbox s \cdot 3,0 \cdot 10^{8} \mbox{m/s} = 2,25 \mbox{cm}$ .
 \end{center}
 Wobei $T$ der zeitliche Abstand zwischen den Messungen und $c$ die Lichtgeschwindigkeit ist. \par
 Für die relative Messungenauigkeit gilt dann
 \begin{center}
-  $\frac{\Delta s}{s} = 1,7 \cdot 10^{-10} $ .
+  $\frac{2\Delta s}{s} = 3,4 \cdot 10^{-10} $ .
 \end{center}
 
 
@@ -68,23 +69,36 @@ Wobei $r$ der Abstand zwischen Erde und Sonne ist.
 
 \subsection{Aufgabe 3c}
 Für die Entfernung zum Stern gilt der Zusammenhang
-\begin{center}
-  $d = \frac{r}{\sin \delta}$
-\end{center}
-Nun weicht die Messung der Sternparallaxe um $\pm\Delta\delta$ von der tatsächlichen Entfernung ab. Wodurch sich eine absolute Messungenauigkeit $\pm\Delta d$ ergibt. Da sich bei so kleinen Winkeln der $\sin \delta$ annähernd linear verhält, gilt für die absolute Messungenauigkeit
-\begin{center}
-  $
-    \Delta d = \frac{r}{2} \left|  \frac{1}{\sin(\delta + \Delta\delta)} - \frac{1}{\sin(\delta - \Delta\delta)} \right|
-    = 1,2 \cdot 10^{18} \mbox{m} = 127,9 \mbox{Lj}
-  $ .
-\end{center}
+\begin{align*}
+  d = \frac{r}{\sin \delta} \mbox{.}
+\end{align*}
+Nun weicht die Messung der Sternparallaxe um $\pm\Delta\delta$ von der tatsächlichen Entfernung ab. Wodurch sich eine absolute Messungenauigkeit $\pm\Delta d$ ergibt. Da sich bei so kleinen Winkeln der $\sin \delta$ verhält, gilt für die absolute Messungenauigkeit
+\begin{align*}
+  \Delta d = \frac{r}{\sin\delta } \mbox{.}
+\end{align*}
+Da der Winkel $\delta$ sehr klein ist, gilt folgende Näherung
+\begin{align*}
+  d = \frac{r}{\delta} \mbox{.}
+\end{align*}
+Da $d$ nichtlinear abhängig von $\delta$ ist, schätzt man den Fehler mithilfe der Ableitung ab. Solange $\Delta\delta \ll \delta$ ist, gilt
+\begin{align*}
+  \frac{d}{d \delta} d &= -\frac{r}{\delta^{2}} \mbox{.}
+\end{align*}
+Die Ableitung kann dann wie folgt genähert werden
+\begin{align*}
+  \frac{d}{d \delta} d \approx \frac{\Delta d}{\Delta \delta} \Rightarrow 
+  \Delta d = \frac{d}{d\delta} d \cdot \Delta \delta \mbox{.}
+\end{align*}
+Daraus folgt
+\begin{align*}
+  \Delta d = -\frac{r}{\delta^{2}} \cdot \Delta \delta \mbox{.}
+\end{align*}
 Für die relative Messungenauigkeit gilt dann
 \begin{center}
   $
     \frac{\Delta d}{d} = 0,2 = 20 \mbox{\%}
   $ .
 \end{center}
-
 \subsection{Aufgabe 3d}
 Für die Bearbeitung der Aufgabe wird angenommen, dass die Raumsonde Gaia genausoweit von der Sonne entfernt ist wie die Erde. 
 Daraus folgt der Zusammenhang für die Entfernung
@@ -109,7 +123,7 @@ Daraus folgt für die maximal zu messende Distanz
 \begin{center}
   $
     d_{\mbox{max}} < \frac{r}{\sin \Delta\delta} = \frac{150 \cdot 10^9 \mbox{m}}{\sin 25 \cdot \frac{\pi}{648000} \cdot 10^{-6}}
-    = 7,09 \cdot 10^{22} \mbox{m} = 7,5 \cdot 10^{6} \mbox{Lj}
+    = 1,24 \cdot 10^{21} \mbox{m} = 1,3 \cdot 10^{5} \mbox{Lj}
   $ .
 \end{center}
 \section{Aufgabe 4}
@@ -120,7 +134,7 @@ Daraus folgt für die maximal zu messende Distanz
 
 
 
-
+ 
 
 
 
