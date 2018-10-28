@@ -5,6 +5,10 @@
 \usepackage{ngerman}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{siunitx}
+
+
 
 \setcounter{secnumdepth}{0}
 \title{Übungsblatt 01}
@@ -17,13 +21,13 @@
 \section*{Aufgabe 1}
 Die maximale Flughöhe während des Parabelflugs sei $x_1$ und die ursprüngliche Flughöhe sei $x_0$. Zum Zeitpunkt $t=0$ hat das Flugzeug den Scheitelpunkt der Parabelbahn erreicht. Allgemein gilt für die Flughöhe $x$
 \begin{align*}
-  x(t) = x_1 - \frac{1}{2} g t^2
+  x(t) = x_1 + v_xt- \frac{1}{2} g t^2
 \end{align*} 
-Nach $\Delta t = 20 \mbox{s}$ ist das Flugzeug von Hochpunkt zurück auf die ursprüngliche Höhe gefallen. 
+Zum Zeitpunkt $t_0$ hat das Flugzeug eine Geschwindigkeit in x-Rightung $v_x=0$. Nach $\Delta t = 20 \mbox{s}$ ist das Flugzeug von Hochpunkt zurück auf die ursprüngliche Höhe gefallen. 
 \begin{align*}
   x_0 &= x_1 - \frac{1}{2} g (\Delta t)^2 \\
   x_1 - x_0 &= \frac{1}{2} g (\Delta t)^2 \\
-  &= 2,0 \mbox{km}
+  &= 1962 \mbox{m}
 \end{align*}
 
 \section*{Aufgabe 2}
@@ -98,6 +102,141 @@ Da die Geschwindigkeit $v_0$ gänzlich aufgehoben wird, gilt
 
 
 
+\section*{Aufgabe 1}
+  Da das Flugzeug antriebslos fällt, braucht es genau so lange hoch wie runter. Folglich kann man die überwundene Höhe berechnen, indem man berechnet, wie weit das Flugzeug in $\frac{t}{2}$ fällt.
+  \begin{align*}
+    h = h_0 + v_{z0}t-\frac{1}{2}gt^2
+  \end{align*}
+  $v_{z0}$ ist in diesem Fall gleich $0$, da wir unser $t=0$ auf das Maximum der Parabel setzen. Jetzt berechenen wir wann das Flugzeug die AUsgangshöhe $0$ wieder erricht. (Natürlich ist die Ausgangshöhe nicht tatsächlich $0m$ aber der Wert dieser Höhe ist irrelevant für die Rechnung, also kann man ihn weglassen.)
+  \begin{align*}
+    0 &= h_0 - \frac{1}{2}gt^2 \\
+    h_0 &= \frac{1}{2}gt^2 \\
+    &=\frac{1}{2}*9.81\frac{m}{s^2}*(20s)^2 \\
+    &=1962m
+  \end{align*}
+  Das Flugzeug überwindet auf dem Parabelflug einen Höhenunterschied von 1962m.
 
-
+\section*{Aufgabe 2}
+  \subsubsection*{a)}
+    \begin{align*}
+      x_{(t)}=v_{x0}t \qquad y_{(t)}=v_{y0}t-\frac{1}{2}gt^2
+    \end{align*}
+    Bei $\ang{45}$ ist $v_{x0} = v_{y0}$. Nun berechen wir den Zeitpunkt, wo der Ball aufkommt, sprich $y=0$.
+    \begin{align*}
+      y=0&=v_{y0}t-\frac{1}{2}gt^2 \\
+      &=t(v_{y0}-\frac{1}{2}gt) \qquad \qquad \Rightarrow Nst_1(0,0)\\
+      0&=v_{y0}-\frac{1}{2}gt\\
+      t&=\frac{2v_{y0}}{g}
+    \end{align*}
+    Nun stellen wir die Formel für $x$ in Abhängigkeit von $\alpha$ auf.
+    \begin{align*}
+      x=v_{x0}\frac{2v_{y0}}{g}
+    \end{align*}
+    Mit:
+    \begin{align*}
+      v_{x0}&=\cos(\alpha)v_0\\
+      v_{y0}&=\sin(\alpha)v_0\\\\
+      x&=\cos(\alpha)v_0\frac{2\sin(\alpha)v_0}{g}\\
+      &=v_0(\frac{2}{g}\cos(\alpha)\sin(\alpha)) \\
+      x&\sim \cos(\alpha)\sin(\alpha)
+    \end{align*}
+    Um den Maximalwert für x zu finden differenzieren wir die Funktion und finden ihre Nullstelle.
+     \begin{align*}
+      (\cos(\alpha)\sin(\alpha))\prime &= \cos^2(\alpha)-\sin^2(\alpha)\\
+      0&=\cos^2(\alpha)-\sin^2(\alpha)\\
+      \sin^2(\alpha)&=\cos^2(\alpha)
+    \end{align*}
+    Wenn man sich $\sin^2$ und $\cos^2$ aufzeichnet, sieht man, dass sie sich bei $\ang{45}$ und $\ang{225}$ schneiden. Natürlich schneiden sie sich auch wenn man Vielfache von $2\pi$ addiert, dies ist jedoch nicht relevant für die Aufgabe. $\ang{225}$ ist für diese Aufgabe ebenfalls nicht sinvoll, da der Fußball nicht in die Erde geschossen wird. \\
+    Hiermit ist gezeigt, dass die Schussweite für einen Abschusswinkel von $\ang{45}$ maximal ist.
+  \subsubsection*{b)}
+    Da der Luftwiderstad vernachlässigt werden kann ist die Abschussgeschwindigkeit die selbe, wie die Geschwindigkeit im Auftreffpunkt.\\
+    Zeitpunkt des Auftreffens:
+    \begin{align*}
+      x_(t)&=v_{x0}t \qquad x_{(t)}=l \\
+      t&=\frac{l}{v_{x0}}\\ \\
+      y_{(t)}&=y_0+v_{y0}t-\frac{1}{2}gt^2 \qquad y_{(t)}=0 \\
+      0&=v_{y0}\frac{l}{v_{x0}}-\frac{1}{2}g\left(\frac{l}{v_{x0}}\right)^2 \qquad v_{x0}=v_{y0}\mbox{ wird im Folgenden als $v$ notiert.}\\
+      0&=v\frac{l}{v}-\frac{1}{2}g\left(\frac{l}{v}\right)^2 \\
+      \frac{1}{2}gl&=v^2 \\
+      v&=v_{x0}=v_{y0}=\sqrt{\frac{gl}{2}} \\
+      v_0&=\sqrt{2v^2}=\sqrt{2}\frac{gl}{2} \\
+      v_0&=\sqrt{2}\left(\frac{9.81\frac{m}{s^2}*80m}{2}\right)=28.01428\frac{m}{s}=100.8514\frac{km}{h}
+    \end{align*}
+    Die maximale Abschussgeschwindigkeit beträgt $100.8514\frac{km}{h}$
+  \subsubsection*{c)} 
+    Näherungsweise kann manb die Zeit berechnen, die der Ball braucht um die Strecke, die er eingedellt wird, zurückzulegen.
+    \begin{align*}
+      t=\frac{s}{v}=\frac{0.05m}*{28.01428\frac{m}{s}}=1.785*10^{-3}s
+    \end{align*}
+    Der Ball wird innerhalb von $1.785*10^{-3}$ abgebremst.
+  \subsubsection*{d)}
+    \begin{align*}
+      a=\frac{v}{t}=\frac{28.01428\frac{m}{s}}{1.785*10^{-3}s}=-1.5694*10^{4}\frac{m}{s^2}
+    \end{align*}
+\section*{Aufgabe 3}
+    \subsubsection*{a)}
+        Um den Winkel $\alpha$ berechenen, stellt man die Funktion für $z_{(t)}$ nach $\alpha$ um und setzt einen gegebenen Punkt ein, in diesem Fall ist der Punkt der, wo der Ball auf den Boden trifft.
+        \begin{align*}
+          h_{(t)}&=h_0+v_{h0}t-\frac{1}{2}gt^2 \\
+        \end{align*}
+        Im Auftreffpunkt ist t:
+        \begin{align*}
+          t=\frac{s}{t}=\frac{\frac{L}{2}+a}{v_x}
+        \end{align*}
+        Für diesen $t$-Wert ist der $y$-Wert 0.
+        \begin{align*}
+          0=h_0+v_{y0}t-\frac{1}{2}g\left(\frac{\frac{L}{2}+a}{v_x}\right)^2
+        \end{align*}
+        Einsetzen der Näherungen:
+        \begin{align*}
+          0=h_0+v_0\alpha t-\frac{1}{2}g\left(\frac{\frac{L}{2}+a}{v_0}\right)^2
+        \end{align*}
+        Nach $\alpha$ aufgelöst:
+         \begin{align*}
+          \alpha &= \frac{\frac{1}{2}g\left(\frac{\frac{L}{2}+a}{v_0}\right)-h_0}{\left(\frac{L}{2}+a\right)} \\
+          \alpha &= -0.1295 rad = \ang{-7.41996}
+        \end{align*}
+        J.I. muss den Winkel \ang{-7.41996} wählen, damit der Ball nach dem Aufschlag im Punkt A auftrifft.
+      \subsubsection*{b)}
+        Diese Aufgabe kann analog zu $a)$ gelöst werden mit dem Unterschied, dass der Punkt nicht $A$ sodern die obere Kante des Netzes sein muss.
+        \begin{align*}
+          t=\frac{s}{t}=\frac{\frac{L}{2}}{v_x}
+        \end{align*}
+        Nun in $y_{(t)}$ einsetzen und wieder mit Hilfe der Näherungen nach $\alpha$ auflösen.
+        \begin{align*}
+          \alpha &= \frac{h-\frac{1}{2}g\left(\frac{\frac{L}{2}}{v_0}\right)^2-h_0}{\frac{L}{2}} \\
+          \alpha &= -0.1624 \mbox{rad } = \ang{-9.3056}
+        \end{align*}
+        Damit der Ball übers Netz fliegt muss der Winkel mind. $\ang{-9.3056}$ sein.
+      \subsubsection*{c)}
+        \begin{align*}
+          t=\frac{s}{v}=\frac{L}{v_x}\approx\frac{L}{v_0}=0.3382s
+        \end{align*}
+        B.T. bleiben ab dem Aufschlag $0.3382s$ bis er den Ball zurückzuschlagen muss.
+\section*{Aufgabe 4}
+  \subsubsection*{a)}
+    \begin{align*}
+      \cos(\phi)&=\frac{\vert\vec{a_b}\vert}{\vert\vec{a}\vert} \\
+      \cos(\frac{\pi}{4})*\frac{5}{2}&=\frac{5\sqrt{2}}{4}
+    \end{align*}
+  \subsubsection*{b)}
+    \begin{align*}
+      P_1&=(1,1) \quad P_2=(5,4) \quad P_3=(3,-5) \\
+      \vec{a}&=\vec{P_1P_2}=\begin{pmatrix}4\\3\end{pmatrix} \quad \vec{b}=\vec{P_1P_3}=\begin{pmatrix}2\\-6\end{pmatrix} \\
+      \vec{0P_4}&=\vec{a}+\vec{b}=\begin{pmatrix}6\\-3\end{pmatrix} \\
+      P_4&=(6,-3)
+    \end{align*}
+  \subsubsection*{c)}
+    2 Vektoren sind zueinander senkrecht, wenn ihr Skalarprodukt 0 ergibt.
+    \begin{align*}
+      i) \quad&\vec{a}\cdot\vec{b}=\begin{pmatrix}2\\-3\\1\end{pmatrix}\cdot\begin{pmatrix}-1\\4\\2\end{pmatrix}(-2-12+2)=-12\neq0 \\
+      ii) \quad&\vec{a}\cdot\vec{b}=\begin{pmatrix}4\\-3\\1\end{pmatrix}\cdot\begin{pmatrix}-2\\-4\\-4\end{pmatrix}(-8+12-4)=0
+    \end{align*}
+    Die Vektoren in $ii)$ sind senkrecht zueinander, die in $i)$ sind es nicht.
+  \subsubsection*{d)}
+    \begin{align*}
+      \cos(\phi)&=\frac{\vec{a}\cdot\vec{b}}{\vert\vec{a}\vert\cdot\vert\vec{b}\vert}=\frac{2}{3} \\
+      \phi &= \arccos\left(\frac{2}{3}\right)=0.841rad=\ang{48.1897}
+    \end{align*}
+  \includepdf[pages=-]{aufgabe_5.pdf}
 \end{document}
