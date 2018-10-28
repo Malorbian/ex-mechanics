@@ -1,0 +1,103 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ngerman}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\setcounter{secnumdepth}{0}
+\title{Übungsblatt 01}
+\author{Lennard Behrens, Tizian Roth}
+
+\begin{document}
+
+\maketitle
+
+\section*{Aufgabe 1}
+Die maximale Flughöhe während des Parabelflugs sei $x_1$ und die ursprüngliche Flughöhe sei $x_0$. Zum Zeitpunkt $t=0$ hat das Flugzeug den Scheitelpunkt der Parabelbahn erreicht. Allgemein gilt für die Flughöhe $x$
+\begin{align*}
+  x(t) = x_1 - \frac{1}{2} g t^2
+\end{align*} 
+Nach $\Delta t = 20 \mbox{s}$ ist das Flugzeug von Hochpunkt zurück auf die ursprüngliche Höhe gefallen. 
+\begin{align*}
+  x_0 &= x_1 - \frac{1}{2} g (\Delta t)^2 \\
+  x_1 - x_0 &= \frac{1}{2} g (\Delta t)^2 \\
+  &= 2,0 \mbox{km}
+\end{align*}
+
+\section*{Aufgabe 2}
+\subsection*{Aufgabe 2a}
+Seien $v_0$ die Abschussgeschwindigkeit und $\alpha$ der Abschusswinkel. So gilt für die Komponenten von $v_0$
+\begin{align*}
+  v_{0x} &= v_0 \cdot \cos\alpha\\
+  v_{0y} &= v_0 \cdot \sin\alpha \mbox{.}
+\end{align*}
+Daraus folgt 
+\begin{align*}
+  x &= t \cdot v_0 \cos\alpha \\
+  y &= t \cdot v_0 \sin\alpha - \frac{1}{2}g \cdot t^2 \\
+  \Rightarrow t &= \frac{x}{v_0 \cos\alpha} \mbox{.}
+\end{align*}
+Nun kann man $t$ eliminieren.
+\begin{align*}
+  y(\alpha) &= x \cdot\tan\alpha - \frac{g \cdot x^2}{2v_0^2\cdot\cos^2\alpha} \\
+  &= x \cdot\left(\tan\alpha - \frac{g \cdot x}{2v_0^2\cdot\cos^2\alpha}\right)
+\end{align*}
+Nun bestimmt man die Nullstellen dieser Funktion $y(\alpha)$, um die zurückgelegte Distanz zu erhalten.
+\begin{align*}
+  y(\alpha) &= x\cdot\left(\tan\alpha - \frac{g \cdot x}{2v_0^2\cdot\cos^2\alpha}\right) \\
+  \Rightarrow x_1 &= 0 \\
+  0 &=\tan\alpha - \frac{g \cdot x}{2v_0^2\cdot\cos^2\alpha} \\
+  x_2(\alpha) &= 2\frac{v_0^2}{g} \cdot\tan\alpha\cos^2\alpha
+\end{align*}
+Da $x_1=0$ gibt $x_2(\alpha)$ die maximale Schussentfernung an. Um das Maximum für $x_2(\alpha)$ zu ermittelt, setzt man 
+\begin{align*}
+  \frac{dx_2}{d\alpha} &= 0\\
+  0 &= 2\frac{v_0^2}{g}\cdot\left(1 - 2\cos\alpha\sin\alpha\tan\alpha\right)\\
+  &= 2\frac{v_0^2}{g} \cdot\left(1 - 2\cdot\sin^2\alpha\right)\\
+  1 &= 2\cdot\sin^2\alpha \\
+  \alpha &= \arcsin\sqrt{\frac{1}{2}} = \frac{\pi}{4}=45^\circ
+\end{align*}
+
+\subsection*{Aufgabe 2b}
+Aus Aufgabe 2a folgt für die Schussentfernung $d$
+\begin{align*}
+  d = 2\frac{v_0^2}{g} \cos^2\alpha\tan\alpha
+\end{align*}
+Da $\alpha = \frac{\pi}{4}$ gilt 
+\begin{align*}
+  d &= 2\frac{v_0^2}{g} \cos^2\alpha\\
+  v_0 &= \sqrt{\frac{d\cdot g}{\cos^2\alpha}} = 28 \mbox{m/s}
+\end{align*}
+
+\subsection*{Aufgabe 2c}
+Für die mittlere Geschwindigkeit gilt
+\begin{align*}
+  \overline{v} = \frac{\Delta x}{\Delta t} \Rightarrow t = \frac{\Delta x}{\overline{v}}
+\end{align*}
+Zu Beginn des Abbremsens hat der Ball die Geschwindigkeit $v = v_0$ und zum Ende $v = 0$. Daraus ergibt sich die mittlere Geschwindigkeit
+\begin{align*}
+  \overline{v} = \frac{1}{2} v_0 \mbox{.}
+\end{align*}
+Daraus folgt
+\begin{align*}
+  \Delta t = \frac{\Delta x}{\overline{v}} = 2\frac{\Delta x}{v_0} = 3,6 \mbox{ms.}
+\end{align*}
+
+\subsection*{Aufgabe 2d}
+Für die mittlere Beschleunigung gilt
+\begin{align*}
+  \overline{a} = \frac{\Delta v}{\Delta t}
+\end{align*}
+Da die Geschwindigkeit $v_0$ gänzlich aufgehoben wird, gilt
+\begin{align*}
+  \overline{a} = \frac{v_0}{\Delta t} = \frac{v_0^2}{2\cdot\Delta x} = 7,8\cdot 10^3 \mbox{m/s}^2\mbox{.}
+\end{align*}
+
+
+
+
+
+
+\end{document}
