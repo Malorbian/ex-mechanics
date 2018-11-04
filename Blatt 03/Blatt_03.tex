@@ -6,7 +6,10 @@
 \usepackage[fleqn]{amsmath}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{titlesec} 
+\usepackage{titlesec}
+\usepackage{siunitx}
+\usepackage{physics}
+
 
 \title{Übungsblatt 3}
 \author{Lennard Behrens (3200335), Gabriel Kraus (3208414)}
@@ -14,7 +17,104 @@
 \begin{document}
 \maketitle
 
-\section*{Aufgabe 5}
+\section*{Aufgabe 1}
+  Ermittlung von $v_0$: 
+  \begin{align*}
+  E_{kin}&=E_{pot} \\
+  m*g*h &= \frac{1}{2}m*v^2 \\
+  v_0&=\sqrt{2g\sin( \ang{30} )*200m} = 44.2945m \\
+  \end{align*}
+  Aufstellung der Bewegungsgleichungen:
+  \begin{align*}
+  v_x&= \cos(\alpha)v_0 \\
+  v_y&= \sin(\alpha)v_0 \\
+  x_{(t)}&=v_0\cos(\alpha)t \rightarrow t=\frac{x}{v_0\cos(\alpha)} \\
+  y_{(t)}&=y_0-v_0\sin(\alpha)t-\frac{1}{2}gt^2 \\
+  \end{align*}
+  $t$ in $y_{(t)}$ einsetzen
+  \begin{align*}
+  y_{(x)}=y_0-v_0\tan(\alpha)x-\frac{g}{2{v_0}^2\cos^2(\alpha)}x^2 \\
+  \end{align*}
+  Die Gerade auf der der Springer aufkommt: 
+  \begin{align*}
+  g_{(x)}=-\tan(\alpha)x+(y_0-1)
+  \end{align*}
+  Der Auftreffpunkt ist der, wo sich die Gerade und die Parabel schneiden:
+   \begin{align*}
+  g_{(x)}&=y_{(x)} \\
+  -\tan(\alpha)x+(y_0-1)&=y_0-v_0\tan(\alpha)x-\frac{g}{2{v_0}^2\cos^2(\alpha)}x^2 \\
+  0&=x^2-\frac{4{v_0}^2\cos^2(\alpha)}{g} \\
+  x_{1 \slash 2} &= \pm\sqrt{\frac{2}{g}}v_0\cos(\alpha) \\
+  x_{1} &= 17.32m \\
+  x_{2} &= -17.32m \rightarrow \mbox{in diesem Zusammenhang nicht sinnvoll}
+  \end{align*}
+  Dies ist der $x-$Wert parallel zu der $x-$Achse, der tatächlich Wert ist:
+  \begin{align*}
+  \frac{x_1}{\cos(\alpha)}+1m*\sin(\alpha)= 20.4993m
+  \end{align*}
+
+  \section*{Aufgabe 3}
+  Vektorzerlegung von $\vec{W}$ in $\vec{W}$ parallel zum Segel und $\vec{W}$ normal zum Segel:
+  \begin{align*}
+  \vec{W}_N = \vec{W}*\sin(\alpha) \quad \vec{W}_\parallel = \vec{W}*\cos(\alpha) \rightarrow \vec{W_\parallel} \mbox{ hat keine Auswirkung auf das Segel}
+  \end{align*}
+  Vektorzerlegung von $\vec{W}_N$ in $\vec{K}$ und $\vec{K}_N$ normal zu $\vec{K}$. \\
+  Der Winkel $\gamma$, der Winkel zwischen $\vec{K}$ und $\vec{W}_N$ ist $\ang{90}+ \beta - \alpha$ \\
+  \begin{align*}
+  \vec{K}&=\vec{W}_N \cos({\ang{90} + \beta - \alpha}) \\
+  \vec{K}&=\vec{W}_N \sin(\alpha - \beta) \\
+  \vec{K}&=\vec{W} \sin(\beta) \sin(\alpha - \beta) \\
+  \end{align*} 
+  Maximum von $\vec{K}$ bei $\pdv{\vec{K}}{\beta}=0$
+  \begin{align*}
+  0 &= \vec{K}(\cos(\beta)\sin(\alpha - \beta) + \sin(\beta)\cos(\alpha - \beta)(-1)) \\
+  \tan(\beta) &= \tan(\alpha - \beta) \\
+  \beta &= \frac{\alpha}{2}
+  \end{align*}
+
+  \section*{Aufgabe 4}
+  \subsection*{Teil a}
+  Ab einem gewissen Punkt ist die Zentrifugalkraft, die auf den Eisbären wirkt, größer, als die ihr entgegengesetzte Komponente der Gewichtskraft. In diesem Moment verlässt der Eisbär die Kreisbahn des Eisbergs und kommt dementsprechend nicht an dessen Fuß im Wasser auf.  
+  \subsection*{Teil b}
+  \begin{align*}
+  \vec{F}_N &= \vec{F}_g \sin(\alpha), \quad \vec{F}_Z = m\frac{v^2}{r} \\
+  \vec{F}_N &= \vec{F}_Z \\
+  m\frac{v^2}{r} &= mg \sin(\alpha) \\
+  \end{align*}
+  Durch Energierhaltung analog zu Aufgabe 1 und $h = r(1-\sin(\alpha))$
+  \begin{align*}
+  {v_0}^2 = 2gr(1-\sin(\alpha))
+  \end{align*}
+  Mit kürzen erhält man: \\
+  \begin{align*}
+  2-2\sin(\alpha) &= \sin(\alpha) \\
+  \sin(\alpha) &= \frac{2}{3} \\
+  \alpha &= \ang{41.81} \\
+  h &= \sin(\alpha) * r = \frac{2}{3}r
+  \end{align*}
+  \subsection*{Teil c}
+  Der Winkel $\beta$ sei $\alpha - \ang{90}$ um die Rechnung zu vereinfachen.
+  \begin{align*}
+  x_{(t)} &= v_0 \cos(\beta) \rightarrow t = \frac{x}{v_0\cos(\beta)} \\
+  y_{(t)} &= R \cos(\beta) + v_0 \sin(\beta)t - \frac{1}{2}gt^2 \\ 
+  y_{(x)} &= R \cos(\beta) + \tan(\beta)x - \frac{g}{2 {v_0}^2\cos^2{(\beta)}}x^2 \\ 
+  {v_0}^2 &= 2gR(1-\cos(\beta)) \\
+  y_{(x)} &= R \cos(\beta) + \tan(\beta)x - \frac{1}{4 R (1-\cos(\beta)) \cos^2{(\beta)}}x^2
+  \end{align*}
+  Der Eisbär trifft im Punkt $y_{(x)} = 0$ auf.
+  \begin{align*}
+  0 &= x^2 - 4R(1-\cos(\beta)\sin(\beta)\cos(\beta)) - 4R^2(1-\cos(\beta))\cos^3(\beta) \\
+  x_{1 \slash 2} &= 2R \left((1-\cos(\beta))\sin(\beta)\cos(\beta)) \pm \sqrt{(1-\cos(\beta))\cos^2(\beta)*((1-\cos(\beta))\sin(\beta) + \cos(\beta))}\right) \\
+  x_1 &= 0.37922 R\\
+  x_2 &= -1.04177 R \rightarrow \mbox{in diesem Zusammenhang nicht sinnvoll} \\
+  \end{align*}
+  $x_1$ ist nur die Entfehrnung dem Punkt, wo der Eisbär den Eisberg verlässt. Die tatsächliche Entfehrnung $d$ ist:
+  \begin{align*}
+  d &= R(\cos(\alpha) + 0.37922)\\ 
+  d &= \frac{9}{8}R
+  \end{align*}
+
+  \section*{Aufgabe 5}
 \begin{align*}
   \vec{a} \times (\vec{b} \times \vec{c}) &=
   \vec{a} \times 
@@ -59,4 +159,28 @@ Man erkennt, dass $\vec{a} \times (\vec{b} \times \vec{c})$
 in der Ebene liegt, die von $\vec{b}$ und $\vec{c}$ aufgespannt wird.
 Analog dazu liegt $(\vec{a}\times\vec{b})\times\vec{c}$ in der Ebene, die von 
 $\vec{a}$ und $\vec{b}$ aufgespannt wird.
+
+  \section*{Aufgabe 6}
+  \subsection*{Teil a}
+  Drei Vektoren liegen in einer Ebene, wenn ihr Spatprodukt $0$ ergibt.
+  \begin{align*}
+  (\vec{a} \times \vec{b}) &= \begin{pmatrix}1 - 3\\6 - 5\\5 - 2\end{pmatrix} = \begin{pmatrix}-2\\1\\3\end{pmatrix} \\
+  c_1 \cdot \begin{pmatrix}-2\\1\\3\end{pmatrix} &= -2 + 5 - 12 \neq 0 \\
+  c_2 \cdot \begin{pmatrix}-2\\1\\3\end{pmatrix} &= -6 - 3 + 9 = 0 \\
+  \end{align*}
+  $c_2$ liegt in der Ebene, die von $\vec{a}$ und $\vec{b}$ aufgespannt wird.
+  \subsection*{Teil b}
+  \begin{align*}
+  \lambda_a \cdot \begin{pmatrix}5\\1\\3\end{pmatrix} + \lambda_b \cdot \begin{pmatrix}2\\1\\1\end{pmatrix} = \begin{pmatrix}3\\-3\\3\end{pmatrix} \\
+  \end{align*} 
+  Daraus ergeben sich die drei Gleichungen:
+  \begin{align*}
+  i \quad& 5\lambda_a + 2\lambda_b = 3 \\
+  ii \quad& \lambda_a + \lambda_b = -3 \\
+  iii \quad& 3\lambda_a + \lambda_b = 3 \\ \\
+  & \lambda_a = - 3 - \lambda_b \qquad \mbox{in }iii \\
+  & \lambda_b = -6 \qquad \mbox{in }ii \\
+  & \lambda_a = 3
+  \end{align*}
+
 \end{document}
