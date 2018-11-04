@@ -1,0 +1,62 @@
+\documentclass[a4paper,10pt]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ngerman}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{titlesec} 
+
+\title{Übungsblatt 3}
+\author{Lennard Behrens (3200335), Gabriel Kraus (3208414)}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 5}
+\begin{align*}
+  \vec{a} \times (\vec{b} \times \vec{c}) &=
+  \vec{a} \times 
+  \left(\begin{array}{c}
+    b_2 c_3-b_3 c_2\\
+    b_3 c_1-b_1 c_3\\
+    b_1 c_2-b_2 c_1\\
+  \end{array}\right)
+  \\&= 
+  \left(\begin{array}{c}
+    a_2 b_1 c_2+a_3 b_1 c_3-a_2 b_2 c_1-a_3 b_3 c_1\\
+    a_1 b_2 c_1+a_3 b_2 c_3-a_1 b_1 c_2-a_3 b_3 c_2\\
+    a_1 b_3 c_1+a_2 b_3 c_2-a_1 b_1 c_3-a_2 b_2 c_3
+  \end{array}\right)\\
+  (\vec{a}\cdot\vec{c})\vec{b}-(\vec{a}\cdot\vec{b})\vec{c}
+  &= -(a_1 b_1 + a_2 b_2 + a_3 b_3)\{c_1, c_2, c_3\} + (a_1 c_1 + a_2 c_2 + a_3 c_3)\{b_1, 
+  b_2, b_3\}\\
+  &=\left(\begin{array}{c}
+    a_1 c_1 b_1 + a_2 c_2 b_1 + a_3 c_3 b_1 - a_1 b_1 c_1 - a_2 b_2 c_1 - a_3 b_3 c_1\\
+    a_1 c_1 b_2 + a_2 c_2 b_2 + a_3 c_3 b_2 - a_1 b_1 c_2 - a_2 b_2 c_2 - a_3 b_3 c_2\\
+    a_1 c_1 b_3 + a_2 c_2 b_3 + a_3 c_3 b_3 - a_1 b_1 c_3 - a_2 b_2 c_3 - a_3 b_3 c_3\\
+  \end{array}\right)
+  \\&=\left(\begin{array}{c}
+    a_2 c_2 b_1 + a_3 c_3 b_1 - a_2 b_2 c_1 - a_3 b_3 c_1\\
+    a_1 c_1 b_2 + a_3 c_3 b_2 - a_1 b_1 c_2 - a_3 b_3 c_2\\
+    a_1 c_1 b_3 + a_2 c_2 b_3 - a_1 b_1 c_3 - a_2 b_2 c_3\\
+  \end{array}\right)
+\end{align*}
+Die Ausdrücke sind identisch.
+\begin{align*}
+  (\vec{a}\times\vec{b})\times\vec{c} &=
+  \left(\begin{array}{c}
+    a_2 b_1 c_2 + a_3 b_1 c_3 - a_1 b_2 c_2 - a_1 b_3 c_3\\
+    a_1 b_2 c_1 + a_3 b_2 c_3 - a_2 b_3 c_3 - a_2 b_1 c_1\\
+    a_1 b_3 c_1 + a_2 b_3 c_2 - a_3 b_2 c_2 - a_3 b_1 c_1 
+  \end{array}\right) \\
+  &= -\vec{c}\times(\vec{a}\times\vec{b})\\
+  &= -((\vec{c}\cdot\vec{b})\vec{a} - (\vec{c}\cdot\vec{a})\vec{b})\\
+  &= (\vec{c}\cdot\vec{a})\vec{b} - (\vec{c}\cdot\vec{b})\vec{a}
+\end{align*}
+Man erkennt, dass $\vec{a} \times (\vec{b} \times \vec{c})$
+in der Ebene liegt, die von $\vec{b}$ und $\vec{c}$ aufgespannt wird.
+Analog dazu liegt $(\vec{a}\times\vec{b})\times\vec{c}$ in der Ebene, die von 
+$\vec{a}$ und $\vec{b}$ aufgespannt wird.
+\end{document}
