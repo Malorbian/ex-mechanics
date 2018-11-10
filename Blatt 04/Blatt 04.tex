@@ -1,0 +1,68 @@
+\documentclass[a4paper,10pt]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ngerman}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{siunitx}
+\usepackage{physics}
+
+
+\title{Übungsblatt 4}
+\author{Lennard Behrens (3200335), Gabriel Kraus (3208414)}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 4}
+  \subsection*{Aufgbe 4a}
+  Für die Übersicht wird $\pdv{x}{q_1}$ als $a$, $\pdv{x}{q_2}$ als $b$, etc. dargestellt.
+  \begin{align*}
+  \det \left(\begin{array}{c c c}
+    a & b & c \\
+    d & e & f \\
+    g & h & i \\
+  \end{array}\right) &= a \begin{vmatrix} e & f \\ h & i \end{vmatrix} - b \begin{vmatrix} d & f \\ g & i \end{vmatrix} + c \begin{vmatrix} d & e \\ g & h\end{vmatrix} \\
+  &= aei - ahf - bdi + bgf + cdh - cge \\ \\
+  \begin{pmatrix} a \\ d \\ g \end{pmatrix} \cdot \begin{pmatrix} \begin{pmatrix} b \\ e \\ h \end{pmatrix} \times \begin{pmatrix} c \\ f \\ i \end{pmatrix} \end{pmatrix} &= \begin{pmatrix} a \\ d \\ g \end{pmatrix} \cdot \begin{pmatrix} ei - hf \\ hc - bi \\ bf - ec \end{pmatrix} \\
+  &= aei - ahf + dhc - dbi + gbf - gec
+  \end{align*}
+  Die beiden Ausdrücke sind gleich, was zu zeigen war.
+
+  \subsection*{Aufgabe 4b}
+  Volumenelement in Zylinderkoordinaten:
+  \begin{align*}
+  D &= \det \left(\begin{array}{c c c}
+    \pdv{x}{\varrho} & \pdv{x}{\varphi} & \pdv{x}{z} \\
+    \pdv{y}{\varrho} & \pdv{y}{\varphi} & \pdv{y}{z} \\
+    \pdv{z}{\varrho} & \pdv{z}{\varphi} & \pdv{z}{z} \\
+  \end{array}\right) \\
+  &= \det \left(\begin{array}{c c c}
+    \cos(\varphi) & -\varphi \sin(\varphi) & 0 \\
+    \sin(\varphi) & \varrho \cos(\varphi) & 0 \\
+    0 & 0 & 1 \\
+  \end{array}\right) \\
+  &= \varrho \cos^2(\varphi) + \varrho \sin^2(\varphi) = \varrho \\ \\
+  dD &= \varrho \,d\varrho \, d\varphi \, dz
+  \end{align*}
+
+  Volumenelement in Kugelkoordinaten:
+  \begin{align*}
+  D &= \det \left(\begin{array}{c c c}
+    \pdv{x}{\varrho} & \pdv{x}{\theta} & \pdv{x}{\varphi} \\
+    \pdv{y}{\varrho} & \pdv{y}{\theta} & \pdv{y}{\varphi} \\
+    \pdv{z}{\varrho} & \pdv{z}{\theta} & \pdv{z}{\varphi} \\
+  \end{array}\right) \\
+  &= \det \left(\begin{array}{c c c}
+    \sin(\theta)\cos(\varphi) & r \cos(\theta) \cos(\varphi) & -r\sin(\theta) \sin(\varphi) \\
+    \sin(\theta) \sin(\varphi) & r \cos(\theta) \sin(\varphi) & r \sin(\theta) \cos(\varphi) \\
+    \cos(\theta) & -r\sin(\theta) & 0 \\
+  \end{array}\right) \\
+  &= -r^2 \sin(\theta) \\
+  &\mbox{Da es hier um ein Volumen geht muss das Vorzeichen positiv sein.} \\ \\
+  dD &= r^2 \sin(\theta) \,d\varrho \, d\varphi \, dz
+  \end{align*}
+\end{document}
