@@ -17,6 +17,40 @@
 \begin{document}
 \maketitle
 
+\section*{Aufgabe 2}
+\subsection*{Aufgabe 2a}
+Ermittlung der Einheitsvektoren
+\begin{align*}
+x &= \cos(\varphi), \qquad y = \sin(\varphi), \qquad z = z \\
+\varphi &= \omega t \\ \\
+\pdv{\vec{r}}{\varrho} &= \cos(\omega t ) \hat{x} + \sin(\omega t ) \hat{y} \\ 
+| \pdv{\vec{r}}{\varrho} | &= \sqrt{\cos(\omega t ) \hat{x} + \sin(\omega t ) \hat{y}} = 1 \\ 
+\hat{\varrho}_{(t)} &= \frac{\pdv{\vec{r}}{\varrho}}{ | \pdv{\vec{r}}{\varrho} | } = \cos(\omega t ) \hat{x} + \sin(\omega t ) \hat{y} \\ \\
+\pdv{\vec{r}}{\varphi} &= \varrho (-\sin(\omega t ) \hat{x} + \cos(\omega t ) \hat{y}) \\ 
+| \pdv{\vec{r}}{\varphi} | &= \sqrt{\varrho (-\sin(\omega t ) \hat{x} + \cos(\omega t ) \hat{y})} = \varrho \\ 
+\hat{\varphi}_{(t)} &= \frac{\pdv{\vec{r}}{\varphi}}{ | \pdv{\vec{r}}{\varphi} | } = -\sin(\omega t ) \hat{x} + \cos(\omega t ) \hat{y} \\ \\
+\hat{z} &= \hat{z}
+\end{align*}
+Daraus ergeben sich die Zylinderkoordinaten: 
+\begin{align*}
+\vec{r_{(t)}} = \varrho_0 \hat{\varrho} + v_z t \hat{z}
+\end{align*}
+
+\subsection*{Aufgabe 2b}
+$\vec{r}_{(t)}$ nach der Zeit ableiten.
+\begin{align*}
+\dot{\vec{r}}_{(t)} &= \varrho_0 \omega (-\sin(\omega t )\hat{x} + \cos(\omega t ) \hat{y}) + v_z \hat{z} \\
+\dot{\vec{r}}_{(t)} &= \varrho_0 \omega \hat{\varphi} + v_z \hat{z} \\
+\end{align*}
+
+\subsection*{Aufgabe 2c}
+$\dot{\vec{r}}_{(t)}$ nach der Zeit ableiten.
+\begin{align*}
+\ddot{\vec{r}}_{(t)} &= - \varrho_0 \omega^2 (\cos(\omega t )\hat{x} + \sin(\omega t ) \hat{y}) \\
+\ddot{\vec{r}}_{(t)} &= - \varrho_0 \omega^2 \hat{\varrho} \\
+\end{align*}
+
+
 \section*{Aufgabe 4}
   \subsection*{Aufgbe 4a}
   Für die Übersicht wird $\pdv{x}{q_1}$ als $a$, $\pdv{x}{q_2}$ als $b$, etc. dargestellt.
@@ -57,12 +91,18 @@
     \pdv{z}{\varrho} & \pdv{z}{\theta} & \pdv{z}{\varphi} \\
   \end{array}\right) \\
   &= \det \left(\begin{array}{c c c}
-    \sin(\theta)\cos(\varphi) & r \cos(\theta) \cos(\varphi) & -r\sin(\theta) \sin(\varphi) \\
-    \sin(\theta) \sin(\varphi) & r \cos(\theta) \sin(\varphi) & r \sin(\theta) \cos(\varphi) \\
-    \cos(\theta) & -r\sin(\theta) & 0 \\
+    \sin(\theta)\cos(\varphi) & \varrho \cos(\theta) \cos(\varphi) & - \varrho \sin(\theta) \sin(\varphi) \\
+    \sin(\theta) \sin(\varphi) & \varrho \cos(\theta) \sin(\varphi) & \varrho \sin(\theta) \cos(\varphi) \\
+    \cos(\theta) & - \varrho \sin(\theta) & 0 \\
   \end{array}\right) \\
-  &= -r^2 \sin(\theta) \\
-  &\mbox{Da es hier um ein Volumen geht muss das Vorzeichen positiv sein.} \\ \\
+  &= \sin(\theta) \cos(\varphi) (- \varrho^2 \sin^2(\theta) \cos(\varphi)) \\
+  & \quad - \varrho \cos(\theta) \cos(\varphi) (\varrho \cos(\theta) \sin(\theta) \cos(\varphi)) \\ 
+  & \quad - \varrho^2 \sin(\theta) \sin^2(\varphi) \\
+  &= - \varrho^2 \left(\sin^3(\theta) \cos^2(\varphi) + \sin(\theta) \cos^2(\theta) \cos^2(\varphi) + \sin(\theta) \sin^2(\varphi)\right) \\ 
+  &= - \varrho^2 \sin(\theta) \left( \sin^2(\theta) \cos^2(\varphi) + \cos^2(\theta) \cos^2(\varphi) + \sin^2(\varphi) \right) \\
+  &= - \varrho^2 \sin(\theta) \left( \cos^2(\varphi) + \sin^2(\varphi) \right) \\
+  &= - \varrho^2 \sin(\theta) \\
+  &\mbox{Da man im Volumenelement den Betrag nimmt, folgt} \\ \\
   dD &= r^2 \sin(\theta) \,d\varrho \, d\varphi \, dz
   \end{align*}
 \end{document}
