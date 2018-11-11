@@ -9,6 +9,7 @@
 \usepackage{titlesec}
 \usepackage{siunitx}
 \usepackage{physics}
+\usepackage{graphicx}
 
 
 \title{Übungsblatt 4}
@@ -16,6 +17,93 @@
 
 \begin{document}
 \maketitle
+
+\section{Aufgabe 1}
+\subsection*{Aufgabe 1a}
+Lässt man jegliche Reibungsfaktoren und die Ausbreitungsgeschwindigkeit des Signals außer acht, kann man den Steinwurf in den Brunnen als gleichmäßig beschleunigte Bewegungen ansehen, also
+\begin{align*}
+  a = \mbox{const} = g = 9,81 \mbox{m}/\mbox{s}^2 \mbox{.}
+\end{align*}
+Es wird angenommen, dass die Geschwindigkeit als auch die Beschleunigung parallel zu den Brunnenwänden ist. Daraus folgt für die Strecke abhängig von der Zeit
+\begin{align*}
+  s &= \frac{1}{2}\ddot{s}t^2\\
+  s &= \frac{1}{2}gt^2 \mbox{.}
+\end{align*}
+Und umgekehrt gilt für die Fallzeit abhängig von der Strecke
+\begin{align*}
+  t = \sqrt{2\frac{s}{g}}
+\end{align*}
+Für die Tiefe bei $t=6\mbox{s}$ folgt dann
+\begin{align*}
+  s(6\mbox{s}) = 176.58\mbox{m}
+\end{align*}
+\includegraphics[scale=0.5]{./Abbildungen/Abbildung_01.pdf}
+\includegraphics[scale=0.5]{./Abbildungen/Abbildung_02.pdf}
+
+\subsection*{Aufgabe 1b}
+Wenn man sowohl die Reibung als auch die Schallgeschwindigkeit berücksichtig, kann es zu erheblichen Abweichungen kommen. Da die Newton-Reibung proportional zum Quadrat der Geschwindigkeit ist, wird die Beschleunigung mit zunehmender Geschwindigkeit immer kleiner. Dies sorgt dafür, dass sich das fallende Objekt bei geeigneter Falltiefe einer Endgeschwindigkeit beliebig annähert. Für praktische Belange erreicht das Objekt nach einer gewisen Zeit eine Endgeschwindigkeit bzw die Beschleunigung ist nicht mehr konstant, sondern hat signifikant nachgelassen. Da sich das Geräusch des Aufschlags nur mit Schallgeschwindigkeit übertragen werden kann. wird mit zunehmender Tiefe und Geschwindigkeit des Objektes die Messung verfälscht. Man misst dann immer eine Falltiefe, die eigentlich zu groß ist. 
+
+\subsection*{Aufgabe 1c}
+Die Zeit $t$ die gemessen wird, setzt sich nun aus der eigentlichen fallzeit $t_F$ und der Zeit, die das Geräusch zurück braucht $t_G$ zusammen.
+\begin{align*}
+  t &= t_F + t_G\\
+  t &= \sqrt{2\frac{s}{g}} + \frac{s}{c} 
+\end{align*}
+Mithilfe der pq-Formel erhält man dann für $s(t)$ folgende Lösungen
+\begin{align*}
+  s_1 &= \frac{c^2}{g} + ct - \frac{\sqrt{c^4+2c^3gt}}{g}\\
+  s_2 &= \frac{c^2}{g} + ct + \frac{\sqrt{c^4+2c^3gt}}{g}
+\end{align*}
+Im Sachzusammenhang macht jedoch nur 
+\begin{align*}
+  s_1 &= \frac{c^2}{g} + ct - \frac{\sqrt{c^4+2c^3gt}}{g}
+\end{align*}
+Sinn, da das eigentlich gemessene s kleiner wird. 
+Für unser Messergebnis von $t = 6$s bedeutet das
+\begin{align*}
+  s(6\mbox{s}) = 151.35\mbox{m}
+\end{align*}
+
+\includegraphics[scale=0.5]{./Abbildungen/Abbildung_03.pdf}
+Hierbei ist die orangene Kurve diejenige, die die Schallgeschwindigkeit berücksichtigt.
+
+\subsection*{Aufgabe 1d}
+Für die Newtonreibung gilt
+\begin{align*}
+  F_R = \frac{1}{2}c_w\rho A v^2 \mbox{.}
+\end{align*}
+Aufgrund dieser Geschwindigkeitsabhängigen Reibung, ist die Beschleunigung ebenfalls nicht mehr konstant. 
+Für das Kraft, die auf den Stein wirkt gilt dann
+\begin{align*}
+  m\ddot{s} &= m g - \frac{1}{2}c_w\rho A \dot{s}^2
+\end{align*}
+Wie in der Vorlesung besprochen ist die Lösung
+\begin{align*}
+  s   &= \frac{v_E^2}{g} \ln\left(\cosh\left(\frac{gt}{v_E}\right)\right)\\
+  v_E &= \sqrt{2\frac{mg}{c_w\rho A}}
+\end{align*}
+Daraus folgt, dass 
+\begin{align*}
+  t  &= \frac{v_E}{g}\mbox{arcosh}(\exp(\frac{sg}{v_E^2}))
+\end{align*}
+Für die Masse des Steins gilt
+\begin{align*}
+  m = V_{Kugel} \rho_{stein} = \frac{4}{3}\pi r^3 \rho_{stein}
+\end{align*}
+\includegraphics[scale=0.5]{./Abbildungen/Abbildung_04.pdf}
+\includegraphics[scale=0.5]{./Abbildungen/Abbildung_05.pdf}
+
+\subsection*{Aufgabe 1e}
+Wenn man die Schallgeschwindigkeit berücksichtig kommt zu $t(s)$ aus Aufgabe 1d noch ein Term aus Aufgabe 1c dazu.
+\begin{align*}
+  t = \frac{v_E}{g}\mbox{arcosh}(\exp(\frac{sg}{v_E^2})) + \frac{s}{c}
+\end{align*}
+\includegraphics[scale=0.5]{./Abbildungen/Abbildung_06.pdf}
+Nun kann man den Wert für s einfach ablesen:
+\begin{align*}
+  s \approx 100\mbox{m}
+\end{align*}
+
 
 \section*{Aufgabe 2}
 \subsection*{Aufgabe 2a}
