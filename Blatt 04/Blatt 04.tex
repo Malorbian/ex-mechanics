@@ -10,6 +10,7 @@
 \usepackage{siunitx}
 \usepackage{physics}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 
 
 \title{Übungsblatt 4}
@@ -42,6 +43,13 @@ Für die Tiefe bei $t=6\mbox{s}$ folgt dann
 
 \subsection*{Aufgabe 1b}
 Wenn man sowohl die Reibung als auch die Schallgeschwindigkeit berücksichtig, kann es zu erheblichen Abweichungen kommen. Da die Newton-Reibung proportional zum Quadrat der Geschwindigkeit ist, wird die Beschleunigung mit zunehmender Geschwindigkeit immer kleiner. Dies sorgt dafür, dass sich das fallende Objekt bei geeigneter Falltiefe einer Endgeschwindigkeit beliebig annähert. Für praktische Belange erreicht das Objekt nach einer gewisen Zeit eine Endgeschwindigkeit bzw die Beschleunigung ist nicht mehr konstant, sondern hat signifikant nachgelassen. Da sich das Geräusch des Aufschlags nur mit Schallgeschwindigkeit übertragen werden kann. wird mit zunehmender Tiefe und Geschwindigkeit des Objektes die Messung verfälscht. Man misst dann immer eine Falltiefe, die eigentlich zu groß ist. 
+Das Kriterium für den Luftwiderstand ist bereits aus der Vorlesung bekannt. Hierfür wurde die Geschwindigkeit $v_E$ eingeführt. 
+\begin{align*}
+  v_E &= \sqrt{2\frac{mg}{c_w\rho A}}\\
+  gt  &= \sqrt{2\frac{mg}{c_w\rho A}}\\
+  t   &= \frac{1}{g}\sqrt{2\frac{mg}{c_w\rho A}}
+\end{align*}
+Spätestens ab dieser Fallzeit sollte man den Luftwiderstand aber auch die Schallgeschwindigkeit berücksichtigen, da dann die Beschleunigung näherungsweise null ist. 
 
 \subsection*{Aufgabe 1c}
 Die Zeit $t$ die gemessen wird, setzt sich nun aus der eigentlichen fallzeit $t_F$ und der Zeit, die das Geräusch zurück braucht $t_G$ zusammen.
@@ -137,6 +145,20 @@ $\dot{\vec{r}}_{(t)}$ nach der Zeit ableiten.
 \ddot{\vec{r}}_{(t)} &= - \varrho_0 \omega^2 (\cos(\omega t )\hat{x} + \sin(\omega t ) \hat{y}) \\
 \ddot{\vec{r}}_{(t)} &= - \varrho_0 \omega^2 \hat{\varrho} \\
 \end{align*}
+
+
+\section*{Aufgabe 3}
+\subsection*{Aufgabe 3a}
+Für kleine Winkel verhält sich der Sinus annähernd linear. Deshalb kann man auch die Kleinwinkelnäherung anwenden. Der Sinus flacht mit steigendem Winkel jedoch ab und verhält sich nichtmehr lienar. Mit der Kleinwinkelnäherung überschätzt man die Rückstellkraft bei größeren Winkeln stark. Gegeben sei die tatsächliche Rückstellkraft $F_R$ und die anngenäherte Rückstellkraft $F_N$. Daraus folgt für den Faktor $k$:
+\begin{align*}
+  F_R &= k\cdot F_N\\
+  k   &= F_R / F_N = \frac{\sin\varphi}{\varphi}\\
+  k\left(\frac{\pi}{2}\right) &= \frac{2}{\pi}
+\end{align*} 
+\subsection*{Aufgabe 3b}
+Nachfolgend wird das Mathematica Notebook eingefügt. Man erkennt, ganz klar, dass sich die Näherung für kleine Anfangswinkel fast genau so verhält, wie die tatsächliche Lösung.
+ \includepdf[pages=-]{./Abbildungen/Abbildung_07.pdf} 
+%\includegraphics[scale=0.5]{./Abbildungen/Abbildung_07.pdf}
 
 
 \section*{Aufgabe 4}
