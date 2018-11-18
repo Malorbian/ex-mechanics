@@ -1,0 +1,122 @@
+\documentclass[a4paper,10pt]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ngerman}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{xparse}
+
+\title{Übungsblatt 4}
+\author{Lennard Behrens (3200335), Gabriel Kraus (3208414)}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 3}
+\subsection*{Aufgabe 3a}
+Raketengleichung aus der Vorlesung:
+\begin{align*}
+v_{(T)} &= v_{Gas}\ln\left( \frac{m_0}{m_{(T)}}\right) - gT \\
+&= 3413,45\,\frac{\mbox{m}}{\mbox{s}}
+\end{align*}
+
+\subsection*{Aufgabe 3b}
+\begin{align*}
+h_{(t)} &= v_{Gas}t - \frac{1}{2}gt^2 + v_{Gas} \frac{m_{(t)}}{\mu}\ln\left(\ \frac{m_{(t)}}{m_0} \right) \\
+\dot{h_{(t)}} &= v_{Gas} - gt + v_{Gas} \left(\frac{- \mu}{\mu} \ln \left( \frac{m_{(t)}}{m_0}\right) + \frac{m_{(t)}}{\mu} \frac{m_0}{m_{(t)}} \frac{- \mu}{m_0} \right) \\
+\dot{h_{(t)}} &= v_{Gas} \left(1-1-\ln \left( \frac{m_{(t)}}{m_0} \right)\right) - gt \\
+\dot{h_{(t)}} = v_{(t)} &= v_{Gas} \ln \left( \frac{m_0}{m_{(t)}} \right) - gt
+\end{align*}
+Was zu zeigen war.
+\begin{align*}
+h_{(T)} = 570,6725 \, \mbox{km}
+\end{align*}
+
+\subsection*{Aufgabe 3c}
+\begin{align*}
+h_{(t)} = h_{End} + v_{End}t - \frac{1}{2}gt^2 \\
+\end{align*}
+Wobei $h_{End}$ und $v_{End}$ die Höhe/Geschwindigkeit bei Brennschluss sind. \\
+Die Endhöhe ist erreicht, wenn $\dot{h_{(t)}} = 0$.
+\begin{align*}
+\dot{h_{(t)}} &= v_{End} - gt \\
+t &= \frac{v_{End}}{g} \\
+h_{(\frac{v_{End}}{g})} &= 1164,5377 \, \mbox{km}
+\end{align*}
+
+\subsection*{Aufgabe 3d}
+\begin{align*}
+v_{End2} &= v_{End1} + v_{Gas} \ln\left( \frac{m_0}{m_{(T_2)}} \right) - gT_2 \\
+&= 3437,7 \, \frac{\mbox{m}}{\mbox{s}} \\ \\
+h_{(T_2)} &= h_{(T_1)} + v_{Gas}T_2 - \frac{1}{2}g{T_2}^2 + v_{Gas} \frac{m_{(T_2)}}{\mu}\ln\left(\ \frac{m_{(T_2)}}{m_0} \right) \\
+&= 1614,8077 \, \mbox{km} \\ \\
+h_{(t)} &= h_{(T_2)} + v_{End2}t - \frac{1}{2}gt^2 \quad \mbox{Die Endhöhe ist erreicht, wenn $\dot{h_{(t)}} = 0$ ist.} \\
+t &= \frac{v_{End2}}{g} \\
+h_{Max} &= h_{(T_2)} + \frac{1}{2} \frac{{v_{End2}}^2}{g} \\
+&= 2217,141 \, \mbox{km}
+\end{align*}
+
+\subsection*{Aufgabe 4d}
+\begin{align*}
+F_g \propto \frac{1}{r^2} \\
+\frac{F_{g(r_1)}}{F_{g(r_2)}} = 0.7144 
+\end{align*}
+Wobei $r_1$ der Erdradius ist und $r_2$ Erdradius $+$ Endhöhe der ersten Rakete. \\
+Bei der Endhöhe der ersten Rakete beträgt die Erdbeschleunigunu nur noch $71.44\%$ der Erdbeschleunigung auf der Erdoberfläche. Folglich ist die Annahme einer konstanten Erdbeschleunigung definitiv nicht gerechtfertigt. Bei der Endhöhe der 2. Rakete ist die Abweichung noch größer.
+
+\section*{Aufgabe 4}
+\subsection*{Aufgabe 4a und 4b}
+Für Pinguin A (kürzester Weg)
+\begin{align*}
+r_{(t)} &= \{L-v_xt,\, v_yt,\, v_zt \} \\
+P_1 &= r_{(t_1)} = \{L , \, 0 , \, 0 \} \rightarrow \{L-v_xt_1,\, v_yt_1,\, v_zt_1 \} \,\, \mbox{mit} \,\, t_1 = 0 \\
+P_2 &= r_{(t_2)} = \{0 , \, L , \, L \} \rightarrow \{L-v_xt_2,\, v_yt_2,\, v_zt_2 \} \,\, \mbox{mit} \,\, t_2 = \frac{L}{v_x} \\
+\dv{\vec{r_{(t)}}}{t} &= \{-v_x ,\, v_y ,\, v_z \} \\
+\end{align*}
+Man bemerke: $-v_x = v_y = v_z$, was im Folgendem als $v$ bezeichnet wird.
+\begin{align*}
+W_1 = \int_{P_1}^{P_2} \vec{F}_{(\vec{r})} \dd \vec{r} &= \int_{t_1}^{t_2} \vec{F}_{( \vec{ r_{(t)} } )} \dv{\vec{r_{(t)}}}{t} \dd t \\
+&= \int_0^{\frac{L}{v}} \mqty(a (L-v)^2 v^2 t^2 \\ b (L-vt)^3 v t \\ c v^4 t^4) \cdot \mqty(-v \\ v \\ v) \dd t \\
+&= \left(-\frac{1}{30}a + \frac{1}{20}b + \frac{1}{5}c\right)L^5
+\end{align*}
+
+Für Pinguin B (spiralförmiger Weg)
+\begin{align*}
+r_{(t)} &= \{L\cos(\omega t) , \, L\sin(\omega t) ,\, v_zt \} \\
+P_1 &= r_{(t_1)} = \{L , \, 0 , \, 0 \} \rightarrow \{L\cos(\omega t_1),\, L\cos(\omega t_1),\, v_zt_1 \} \,\, \mbox{mit} \,\, t_1 = 0 \\
+P_2 &= r_{(t_2)} = \{0 , \, L , \, L \} \rightarrow \{L\cos(\omega t_2),\, L\cos(\omega t_2),\, v_zt_2 \} \,\, \mbox{mit} \,\, t_2 = \frac{L}{v_z} = \frac{2 \pi}{\omega} \\
+\dv{\vec{r_{(t)}}}{t} &= \{- \omega L\sin(\omega t) ,\, \omega L\cos(\omega t) ,\, v_z \} \\
+\end{align*}
+\begin{align*}
+W_2 = \int_{P_1}^{P_2} \vec{F}_{(\vec{r})} \dd \vec{r} &= \int_{t_1}^{t_2} \vec{F}_{( \vec{ r_{(t)} } )} \dv{\vec{r_{(t)}}}{t} \dd t \\
+&= \int_0^{\frac{L}{v_z} \mbox{bzw.} \frac{2 \pi}{\omega}} \mqty(a L^2 \cos^2(\omega t) L^2 \sin^2(\omega t) \\ b L^3 \cos^3(\omega t) L \sin(\omega t) \\ c {v_z}^4 t^4) \cdot \mqty(- \omega L\sin(\omega t) \\ \omega L\cos(\omega t) \\ v_z) \dd t \\
+&= \left(-\frac{2}{15}a + \frac{1}{5}b + \frac{1}{5}c\right)L^5
+\end{align*}
+
+\subsection*{Aufgabe 4c}
+\begin{align*}
+W_1 &= W_2 \\
+\left(-\frac{1}{30}a + \frac{1}{20}b + \frac{1}{5}c\right)L^5 &= \left(-\frac{2}{15}a + \frac{1}{5}b + \frac{1}{5}c\right)L^5 \\ 
+- \frac{1}{30}a + \frac{1}{20}b &= - \frac{2}{15}a + \frac{1}{5}b \\
+a &= \frac{3}{2}b
+\end{align*}
+Hier kann $c$ beliebig gewählt werden.
+
+\subsection*{Aufgabe 4d}
+\begin{align*}
+\curl \vec{F}_{(\vec{r})} &= 0 \\
+\mqty( \pdv{}{x} \\ \pdv{}{y} \\ \pdv{}{z}) \times \mqty(ax^2y^2 \\ bx^3y \\ cz^4) &= \mqty(0 \\ 0 \\ 3bx^2y - 2ax^2y) \\
+\rightarrow \mqty(0 \\ 0 \\ 0) &= \mqty(0 \\ 0 \\ 3bx^2y - 2ax^2y) \\
+0 &= 3bx^2y - 2ax^2y \\
+a &= \frac{3}{2}b
+\end{align*}
+Aufgabe c und d haben das selbe Ergebnis, da die Arbeit auf beiden Wegen genau dann gleich groß ist, wenn das Kraftfeld keine Rotation hat.
+
+\end{document}
