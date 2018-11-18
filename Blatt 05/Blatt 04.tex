@@ -14,10 +14,34 @@
 \usepackage{xparse}
 
 \title{Übungsblatt 4}
-\author{Lennard Behrens (3200335), Gabriel Kraus (3208414)}
+\author{Lennard Behrens (3200335), Gabriel Kraus (3208414), Ole Schmidt(3206580)}
 
 \begin{document}
 \maketitle
+
+\section*{Aufgabe 2}
+\subsection*{a)}
+\begin{tabular}{lc}
+Brenndauer & $0,15\,\mathrm{s}$\\
+Ausströmrate & $-\frac{0,3\,\mathrm{kg}}{0,15\,\mathrm{s}}=-2\,\frac{\mathrm{kg}}{\mathrm{s}}$\\
+Ausströmgeschwindigkeit & $20\,\frac{\mathrm{m}}{\mathrm{s}}$\\
+Höhe bei Brennschluss & $3,5\,\mathrm{m}$\\
+Gesamthöhe & $30\,\mathrm{m}$\\
+\end{tabular}
+
+\subsection*{b)}
+\begin{align*}
+v\left(t_{End}\right)&=v_{Gas}\cdot\ln\left(\frac{m_0}{m\left(t_{End}\right)}\right)-g\cdot t_{End}=20\,\frac{\mathrm{m}}{\mathrm{s}}\cdot\ln\left(\frac{411\,\mathrm{g}}{111\,\mathrm{g}}\right)-g\cdot0,15\,\mathrm{s}=24,71\,\mathrm{s}\\ \\
+h\left(t_{End}\right)&=v_{Gas}\cdot t-\frac{1}{2}\cdot g\cdot t_{End}^2+v_{Gas}\cdot\frac{m\left(t_{End}\right)}{\mu}\cdot\ln\left(\frac{m\left(t_{End}\right)}{m_0}\right)\\
+&=20\,\frac{\mathrm{m}}{\mathrm{s}}\cdot 0,15\,\mathrm{s}-\frac{1}{2}\cdot g\cdot \left(0,15\,\mathrm{s}\right)^2+20\,\frac{\mathrm{m}}{\mathrm{s}}\cdot\frac{0,111\,\mathrm{kg}}{-2\,\frac{\mathrm{kg}}{\mathrm{s}}}\cdot\ln\left(\frac{111\,\mathrm{g}}{411\,\mathrm{g}}\right)=4,34\,\mathrm{m}\\ \\
+t_{End2}&=\frac{v\left(t_{End}\right)}{g}=2,52\,\mathrm{s}\\
+h_{Ges}\left(t_{End2}\right)&=h\left(t_{End}\right)+v\left(t_{End}\right)\cdot t_{End2}-\frac{1}{2}\cdot g\cdot t_{End2}^2\\
+&=4,34\,\mathrm{m}+24,71\,\mathrm{s}\cdot 2,52\,\mathrm{s}-\frac{1}{2}\cdot g\cdot\left(2,52\,\mathrm{s}\right)^2=35,47\,\mathrm{m}
+\end{align*}
+Die berechneten Werte haben zwar eine Abweichung von den abgelesenen Werten, was aber noch in einem Rahmen liegt, in dem man Sagen kann, dass die Beobachtungen annähernd mit der Berechnung übereinstimmen. Manche Größen, wie zum Beispiel die Ausströmgeschwindigkeit des Wassers und die Gesamthöhe, waren sehr schlecht aus den Videos zu Bestimmen und haben eine entsprechend kleine Genauigkeit, welche die Abweichungen erklären. Außerdem wurden in der Berechnung Größen wie die Luftreibung vernachlässigt, die eine große Auswirkung auf die Flugbahn hat.
+
+\subsection*{c)}
+Die Luftreibung ist sehr wichtig, da die Flasche verglichen zu ihrem geringen Gewicht eine sehr große Geschwindigkeit erreicht. Da die Beschleunigung, die durch die Luftreibung entsteht, proportional zu $\frac{k}{m}$ ist, ist sie bei sehr großer Geschwindigkeit und sehr kleinem Gewicht sehr groß. In der Beschleunigungsphase wird sie also immer relevanter, da die Geschwindigkeit zunimmt und die Masse abnimmt. Danach wird sie wieder weniger relevant, da die Geschwindigkeit wieder abnimmt. Man muss die Luftreibung also ab einer bestimmten Geschwindigkeit in der Beschleunigungsphase bis zu einer (größeren) Geschwindigkeit in der Flugphase (zum Beispiel wenn die Beschleunigung der Reibungskraft mindestens 5\% der Gesamtbeschleunigung der Rakete entspricht). Davor und danach ist die Reibungskraft zu gering um eine Signifikante Korrektur darzustellen.
 
 \section*{Aufgabe 3}
 \subsection*{Aufgabe 3a}
