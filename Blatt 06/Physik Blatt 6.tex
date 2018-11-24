@@ -17,9 +17,50 @@
 \begin{document}
 \maketitle
 
+\section*{Aufgabe 1}
+\subsection*{a)}
+Um die Geschwindigkeiten vor dem Stoß ins Schwerpunktsystem zu übertragen, subtrahiere ich jeweils die Geschwindigkeit des Schwerpunktsystems. Die Formel für diese Geschwindigkeit ist aus der Vorlesung bekannt. Durch den Stoß ändern sich jeweils die Vorzeichen der Geschwindigkeiten im Schwerpunktsystem. Danach addiere ich die Geschwindigkeit des Schwerpunktsystems wieder.
+\begin{align*}
+v_{1S}&=v_1-v_S\\
+v_{1S}'&=-v_{1S}=v_S-v_1\\
+v_1'&=v_{1S}'+v_S=v_S-v_1+v_S=2v_S-v_1\\
+v_S&=\frac{m_1\cdot v_1+m_2\cdot v_2}{m_1+m_2}\\
+v_1'&=2\cdot\frac{m_1\cdot v_1+m_2\cdot v_2}{m_1+m_2}+v_1=\frac{2\cdot m_1\cdot v_1+2\cdot m_2\cdot v_2-v_1\cdot(m_1+m_2)}{m_1+m_2}\\
+&=\frac{2\cdot m_1\cdot v_1+2\cdot m_2\cdot v_2-v_1\cdot m_1-v_1\cdot m_2}{m_1+m_2}\\
+&=\frac{v_1\cdot(m_1-m_2)+2\cdot m_2\cdot v_2}{m_1+m_2}
+\end{align*}
+Aus Symmetriegründen kann man alle Indizes vertauschen, woraus die Gleichung
+\begin{equation*}
+v_2'=\frac{v_2\cdot(m_2-m_1)+2\cdot m_1\cdot v_1}{m_1+m_2}
+\end{equation*}
+folgt. Diese beiden Gleichungen waren herzuleiten.
+\subsection*{b)}
+In dieser Aufgabe leite ich beide Formeln über den Energie- und Impulssatz her.
+\begin{align*}
+\frac{1}{2}\cdot m_1\cdot v_1^2+\frac{1}{2}\cdot m_2\cdot v_2^2&=\frac{1}{2}\cdot m_1\cdot v_1'^2+\frac{1}{2}\cdot m_2\cdot v_2'^2\\
+\rightarrow m_1\cdot(v_1^2-v_1'^2)&=m_2\cdot(v_2'^2-v_2^2)\\ \\
+m_1\cdot v_1+m_2\cdot v_2&=m_1\cdot v_1'+m_2\cdot v_2'\\
+\rightarrow v_2'&=\frac{m_1\cdot(v_1-v_1')+m_2\cdot v_2}{m_2}
+\end{align*}
+\begin{align*}
+m_1(v_1^2-v_1'^2)&=m_2\left(\frac{m_1^2(v_1-v_1')^2+2m_1m_2v_2(v_1-v_1')+m_2^2v_2^2-m_2^2v_2^2}{m_2^2}\right)\\
+m_1(v_1^2-v_1'^2)&=\frac{m_1^2(v_1-v_1')^2+2m_1m_2v_2(v_1-v_1')}{m_2}\\
+v_1^2-v_1'^2&=\frac{m_1}{m_2}(v_1-v_1')^2+2v_2(v_1-v_1')\\
+(v_1+v_1')(v_1-v_1')&=\frac{m_1}{m_2}(v_1-v_1')^2+2v_2(v_1-v_1')\\
+v_1+v_1'&=\frac{m_1}{m_2}(v_1-v_1')+2v_2\\
+m_2v_1+m_2v_1'&=m_1v_1-m_1v_1'+2m_2v_2\\
+m_2v_1'+m_1v_1'&=v_1(m_1-m_2)+2m_2v_2\\
+v_1'&=\frac{v_1\cdot(m_1-m_2)+2\cdot m_2\cdot v_2}{m_1+m_2}
+\end{align*}
+Man kann wieder aus Symmetriegründen alle Indizes vertauschen. Daraus ergibt sich ebenfalls:
+\begin{equation*}
+v_2'=\frac{v_2\cdot(m_2-m_1)+2\cdot m_1\cdot v_1}{m_1+m_2}
+\end{equation*}
+Dies sind wieder die Gleichungen, die zu Zeigen waren.
+
 \section*{Aufgabe 3}
   \subsection*{Aufgbe 3a}
-  Der Koordinatenursprund liegt im Punkt $A$, mit der positiven $x-$Achse nach unten zeigend. \\ 
+  Der Koordinatenursprung liegt im Punkt $A$, mit der positiven $x-$Achse nach unten zeigend. \\ 
   Die Höhe des Balls läßt sich folgendermaßen beschreiben:
   \begin{align*}
   h_B &= h_0 + v_0 t + \frac{1}{2}gt^2 \\
